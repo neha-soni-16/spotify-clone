@@ -1,0 +1,15 @@
+.player{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.player-main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.player-footer-container {
+    display: flex;
+}
+

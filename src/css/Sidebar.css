@@ -1,0 +1,37 @@
+.sidebar {
+    flex: 0.2;
+    height: 100vh;
+    min-width: 230px;
+    padding: 0px 8px;
+    color: #e9eaec;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.sidebar-logo {
+    width: 60%;
+    padding: 15px 10px;
+}
+
+.sidebar .h1-playlist {
+    align-self: flex-start;
+    padding-left: 25px;
+    padding-top: 25px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #e9eaec;
+}
+
+.sidebar > hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    border: 0.5px solid #5A5E68;
+    background: none;
+}

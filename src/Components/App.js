@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../css/App.css";
 import Login from "./Login";
 import Player from "./Player";
@@ -10,7 +10,7 @@ import { DataLayerContextValue } from "../DataLayer";
 const spotifyApi = new SpotifyWebApi();
 
 function App() {
-    const [accessToken, setToken] = useState(null);
+
     const [currentState, dispatch] = DataLayerContextValue();
 
     useEffect(() => {
@@ -20,7 +20,11 @@ function App() {
 
         // Setting Access Token value
         if (token) {
-            setToken(token);
+            dispatch({
+                type: "SET_TOKEN",
+                token: token,
+            });
+
             spotifyApi.setAccessToken(token);
 
             spotifyApi.getMe().then((user) => {
@@ -29,12 +33,21 @@ function App() {
                     user: user,
                 });
             });
+
+            spotifyApi.getUserPlaylists().then((playlists) => {
+                dispatch({
+                    type: "SET_PLAYLISTS",
+                    playlists: playlists,
+                })
+            })
         }
     }, []);
 
-    console.log("current state", currentState.user);
+    console.log("current state token", currentState.accessToken);
 
-    return <div className="App">{accessToken ? <Player /> : <Login />}</div>;
+    console.log("current state user", currentState.user);
+
+    return <div className="App">{currentState.accessToken ? <Player /> : <Login />}</div>;
 }
 
 export default App;

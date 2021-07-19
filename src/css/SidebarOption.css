@@ -1,0 +1,25 @@
+.sidebar-option {
+    height: 35px;
+    color: #9fa3ac;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-self: flex-start;
+    padding: 3px 25px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.sidebar-option:hover {
+    /* color: #9388a2; */
+    color: #e9eaec;
+}
+
+.sidebar-option-icon {
+    padding-right: 14px;
+}
+
+.sidebar-option > p {
+    font-size: 1rem;
+}

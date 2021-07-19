@@ -1,6 +1,7 @@
 export const initialState = {
     user: null,
-    userPlaylist: [],
+    accessToken: null,
+    playlists: [],
     playing: false,
     currentPlayingItems: null,
 };
@@ -16,6 +17,18 @@ export const reducer = (currentState, action) => {
                 ...currentState,
                 user: action.user,
             };
+        
+        case "SET_TOKEN":
+            return {
+                ...currentState,
+                accessToken: action.token,
+            };
+        
+        case "SET_PLAYLISTS":
+            return {
+                ...currentState,
+                playlists: action.playlists,
+            }
 
         default:
             return currentState;
