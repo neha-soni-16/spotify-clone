@@ -10,7 +10,6 @@ import { DataLayerContextValue } from "../DataLayer";
 const spotifyApi = new SpotifyWebApi();
 
 function App() {
-
     const [currentState, dispatch] = DataLayerContextValue();
 
     useEffect(() => {
@@ -34,12 +33,13 @@ function App() {
                 });
             });
 
+
             spotifyApi.getUserPlaylists().then((playlists) => {
                 dispatch({
                     type: "SET_PLAYLISTS",
                     playlists: playlists,
-                })
-            })
+                });
+            });
         }
     }, []);
 
@@ -47,7 +47,15 @@ function App() {
 
     console.log("current state user", currentState.user);
 
-    return <div className="App">{currentState.accessToken ? <Player /> : <Login />}</div>;
+    return (
+        <div className="App">
+            {currentState.accessToken ? (
+                <Player spotify={spotifyApi} />
+            ) : (
+                <Login />
+            )}
+        </div>
+    );
 }
 
 export default App;

@@ -4,12 +4,12 @@ import Sidebar from "./Sidebar";
 import Body from "./Body";
 import Footer from "./Footer";
 
-function Player() {
+function Player(props) {
     return (
         <div className="player">
             <div className="player-main-container">
                 <Sidebar />
-                <Body />
+                <Body spotify={props.spotify} />
             </div>
             <div className="player-footer-container">
                 <Footer />
@@ -19,5 +19,3 @@ function Player() {
 }
 
 export default Player;
-
-

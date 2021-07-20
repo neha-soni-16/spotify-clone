@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.header-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-toggle .icon-container {
+    background-color: #0f0f0f9d;
+    margin: 0px 10px;
+    border-radius: 100%;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.header-toggle .icon {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.header-toggle .icon-container:hover{
+    
+    background-color: #0f0f0f;
+}
+
+.header-toggle .back {
+    transform: translateX(5px);
+}
+
+.header-toggle .front {
+    transform: rotateY(180deg) translateX(5px);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #0f0f0fb9;
+    padding: 1px 10px;
+    border-radius: 500px;
+    width: 90px;
+    height: 40px;
+}
+
+.header-info .avatar-icon {
+    transform: scale(0.8) translateX(-10px);
+}
+
+.header-info .avatar-name {
+    font-size: 1rem;
+    overflow: hidden;
+}

@@ -24,8 +24,6 @@ function Sidebar() {
             <h1 className="h1-playlist">Playlists</h1>
             <hr />
 
-            {console.log("playlists: ", currentState.playlists.items)}
-
             {currentState.playlists?.items?.map((playlist) => {
                 return <SidebarOption title={playlist.name} />;
             })}
