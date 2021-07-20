@@ -1,7 +1,6 @@
-.player{
+.player {
     display: flex;
     flex-direction: column;
-    height: 100vh;
 }
 
 .player-main-container {
@@ -9,7 +8,13 @@
     height: 100vh;
 }
 
-.player-footer-container {
-    display: flex;
-}
-
+/* .player-footer-container {
+    background-color: #0f0f0f;
+    border: 1px solid #5a5e6883;
+    position: fixed;
+    padding: 10px 15px;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+} */

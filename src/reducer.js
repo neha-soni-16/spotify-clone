@@ -1,6 +1,6 @@
 export const initialState = {
     user: null,
-    accessToken: null,
+    accessToken: 't',
     playlists: [],
     playing: false,
     currentPlayingItems: null,

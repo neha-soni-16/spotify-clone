@@ -1,6 +1,5 @@
 .sidebar {
     flex: 0.2;
-    height: 100vh;
     min-width: 230px;
     padding: 0px 8px;
     color: #e9eaec;
@@ -13,7 +12,8 @@
 
 .sidebar-logo {
     width: 60%;
-    padding: 15px 10px;
+    align-self: flex-start;
+    padding: 15px 13px;
 }
 
 .sidebar .h1-playlist {
@@ -32,6 +32,6 @@
     margin-left: auto;
     margin-right: auto;
     width: 95%;
-    border: 0.5px solid #5A5E68;
+    border: 0.5px solid #5a5e68;
     background: none;
 }

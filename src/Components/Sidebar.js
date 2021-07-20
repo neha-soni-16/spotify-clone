@@ -21,7 +21,7 @@ function Sidebar() {
             <SidebarOption Icon={SearchIcon} title="Search" />
             <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
 
-            <h1 className="h1-playlist">Playlist</h1>
+            <h1 className="h1-playlist">Playlists</h1>
             <hr />
 
             {console.log("playlists: ", currentState.playlists.items)}
