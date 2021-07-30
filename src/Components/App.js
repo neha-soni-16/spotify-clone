@@ -27,25 +27,47 @@ function App() {
             spotifyApi.setAccessToken(token);
 
             spotifyApi.getMe().then((user) => {
-                dispatch({
-                    type: "SET_USER",
-                    user: user,
+                return new Promise((resolve, reject) => {
+                    resolve(
+                        dispatch({
+                            type: "SET_USER",
+                            user: user,
+                        })
+                    );
                 });
             });
-
 
             spotifyApi.getUserPlaylists().then((playlists) => {
                 dispatch({
                     type: "SET_PLAYLISTS",
                     playlists: playlists,
                 });
+
+                dispatch({
+                    type: "SET_DISCOVER_ME",
+                    discoverMe: playlists.items[0],
+                });
+
+                const playlistId = playlists.items[0].id;
+
+                spotifyApi.getPlaylistTracks(playlistId).then((tracks) => {
+                    dispatch({
+                        type: "SET_DISCOVER_ME_TRACK",
+                        discoverMeTracks: tracks,
+                    });
+                });
             });
+
+            console.log("hoii");
+
+            // spotifyApi.getPlaylist(currentState.playlists.items[0].id).then((playlist) => {
+            //     dispatch({
+            //         type: "SET_DISCOVER_WEEKLY",
+            //         discoverWeekly: playlist,
+            //     });
+            // });
         }
     }, []);
-
-    console.log("current state token", currentState.accessToken);
-
-    console.log("current state user", currentState.user);
 
     return (
         <div className="App">

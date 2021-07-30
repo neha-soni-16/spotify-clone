@@ -13,6 +13,7 @@ const scopes = [
     "user-top-read",
     "user-modify-playback-state",
     "user-read-currently-playing",
+    "playlist-read-private",
 ];
 
 export const loginUrl = `${authSpotifyEndPoint}?client_id=${clientId}&scope=${scopes.join(
@@ -29,4 +30,3 @@ export const getTockenFromUserResponse = () => {
             return accumulator;
         }, {});
 };
-

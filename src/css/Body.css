@@ -1,7 +1,82 @@
 .body {
     flex: 0.8;
-    padding: 30px;
+    padding: 10px 20px;
     /* color: #211522; */
     color: white;
-    background: linear-gradient(#9388A2 , #000000);
+    background: linear-gradient(#9388a2, #000000);
+    overflow: scroll;
+}
+
+.body-banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.body-banner > img {
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.8);
+    width: 230px;
+}
+
+.body-banner .body-banner-info {
+    padding: 0px 28px;
+    align-self: flex-end;
+}
+
+.body-banner .body-banner-info > h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.body-banner .body-banner-info > h1 {
+    font-size: 5.4rem;
+    font-weight: 800;
+    padding: 7px 0px;
+}
+
+.body-banner .body-banner-info > p {
+    font-size: 0.8rem;
+}
+
+.body-songs .body-icons {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.body-songs .body-icons .icon {
+    cursor: pointer;
+}
+
+.body-songs .body-icons .play {
+    font-size: 4.4rem;
+    transition: 0.3s ease;
+    
+}
+
+.body-songs .body-icons .play:hover {
+    transform: scale(1.1) !important;
+}
+
+.body-songs .body-icons .favorite {
+    font-size: 2.8rem;
+    padding: 0px 25px;
+    transition: 0.3s ease;
+}
+
+.body-songs .body-icons .favorite:hover {
+    transform: scale(1.1) !important;
+    color: #1db954;
+}
+
+.body-songs .body-icons .more {
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.body-songs .body-icons .more:hover {
+    transform: scale(1.1) !important;
 }
